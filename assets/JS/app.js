@@ -2,7 +2,7 @@
 
 
 
-var api = "https://developers.zomato.com/api/v2.1/categories"
+var api = "http://developers.zomato.com/api/v2.1/categories"
 var apikey = "964d11c9e9159afba79051e5c707f40b"
 var query = "&q="
 var queryURL = "Atlanta";
@@ -42,7 +42,7 @@ var winner;
 // function deleter(){
 //     for(y=0;y>(newArr.length -1);y++){
 //         $.ajax({
-//             url: "https://pixabay.com/api/?username=hutwagnert&key=1631539-10605044-f5529b1c76ff6ff923f9878bd&q=" + newArr[y] + "&image_type=photo&per_page=3&category=food",
+//             url: "http://pixabay.com/api/?username=hutwagnert&key=1631539-10605044-f5529b1c76ff6ff923f9878bd&q=" + newArr[y] + "&image_type=photo&per_page=3&category=food",
 //             async:false,
 //             success: function(responseL) {
 
@@ -206,7 +206,7 @@ $(document).ready(function () {
 
 function grabImgL() {
     $.ajax({
-        url: "https://pixabay.com/api/?key=10654135-5f91e472fb3ae0cdbaf390193&q=" + leftimgFood + "&image_type=photo&per_page=3&category=food",
+        url: "http://pixabay.com/api/?key=10654135-5f91e472fb3ae0cdbaf390193&q=" + leftimgFood + "&image_type=photo&per_page=3&category=food",
         async: false,
         success: function (responseL) {
 
@@ -227,7 +227,7 @@ function grabImgL() {
 
 function grabImgR() {
     $.ajax({
-        url: "https://pixabay.com/api/?key=10654135-5f91e472fb3ae0cdbaf390193&q=" + rightimgFood + "&image_type=photo&per_page=3&category=food",
+        url: "http://pixabay.com/api/?key=10654135-5f91e472fb3ae0cdbaf390193&q=" + rightimgFood + "&image_type=photo&per_page=3&category=food",
         async: false,
         success: function (responseR) {
 
@@ -251,7 +251,7 @@ function citysearch() {
             request.setRequestHeader("user-key", "964d11c9e9159afba79051e5c707f40b");
         },
 
-        url: "https://developers.zomato.com/api/v2.1/cities?lat=" + latitude_fromIP + "&lon=" + longitude_fromIP,
+        url: "http://developers.zomato.com/api/v2.1/cities?lat=" + latitude_fromIP + "&lon=" + longitude_fromIP,
 
         dataType: 'json',
         async: false,
@@ -270,7 +270,7 @@ function cuisinesearch() {
             request.setRequestHeader("user-key", "964d11c9e9159afba79051e5c707f40b");
         },
 
-        url: "https://developers.zomato.com/api/v2.1/cuisines?lat=" + latitude_fromIP + "&lon=" + longitude_fromIP,
+        url: "http://developers.zomato.com/api/v2.1/cuisines?lat=" + latitude_fromIP + "&lon=" + longitude_fromIP,
 
         dataType: 'json',
         async: false,
@@ -322,7 +322,7 @@ function callonforRestruants() {
             request.setRequestHeader("user-key", "964d11c9e9159afba79051e5c707f40b");
         },
 
-        url: "https://developers.zomato.com/api/v2.1/search?entity_id=" + entity_id + "&entity_type=city&count=15&lat=" + latitude_fromIP + "=&lon=" + longitude_fromIP + "&cuisines=" + cuisine_holder,
+        url: "http://developers.zomato.com/api/v2.1/search?entity_id=" + entity_id + "&entity_type=city&count=15&lat=" + latitude_fromIP + "=&lon=" + longitude_fromIP + "&cuisines=" + cuisine_holder,
 
         dataType: 'json',
         async: false,
@@ -347,7 +347,7 @@ function addtoTable() {
         tr.append(rName);
         tr.append(rRating);
         tr.append(rLocation);
-        //   document.getElementById("#i").innerHTML = "https://www.google.com/search?safe=active&q="+listofrestraunts.restaurants[i].restaurant.location.address+"&spell=1&sa=X&ved=0ahUKEwim87G2-sPeAhWOJ3wKHYTgBOQQBQgwKAA&biw=1920&bih=969";
+        //   document.getElementById("#i").innerHTML = "http://www.google.com/search?safe=active&q="+listofrestraunts.restaurants[i].restaurant.location.address+"&spell=1&sa=X&ved=0ahUKEwim87G2-sPeAhWOJ3wKHYTgBOQQBQgwKAA&biw=1920&bih=969";
         $("#mytable").append(tr);
 
     }
