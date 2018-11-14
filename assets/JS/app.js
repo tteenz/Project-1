@@ -182,7 +182,7 @@ $(document).ready(function () {
 
     //ip address finder
     $.ajax({
-        url: 'https://api.ipapi.com/check' + '?access_key=' + access_key,
+        url: 'http://api.ipapi.com/check' + '?access_key=' + access_key,
         dataType: 'json',
         async: false,
         success: function (results) {
@@ -242,7 +242,7 @@ function grabImgR() {
     } else { }
     console.log(imgtopasteR)
 }
-// console.log(imgtopasteR)
+console.log(imgtopasteR)
 
 
 function citysearch() {
